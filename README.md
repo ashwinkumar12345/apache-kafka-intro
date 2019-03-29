@@ -35,11 +35,25 @@ Learn Apache Kafka 2.0 Ecosystem
     - LinkedIn uses Apache Kafka to make real-time connection recommendations 
     
 <a name="theory"></a>
-> ## Apache Kafka Thoery
-- A topic in Apache Kafka is the base of everything. A topic is particular stream of data. It is similar to a table in a database. You can have as many topics as you want in Apache Kafka. It's identified by its name. 
-- Topics are split into partitions. Each partition is ordered and each message within a partition has an incremental id called an offset.
-- To identify a message, you have to say Kafka topic name, partition number, offset number.
+> ## Apache Kafka Theory
+- A topic in Apache Kafka is the base of everything. A topic is particular stream of data. It is similar to a table in a database. You can have as many topics as you want in Apache Kafka. It's identified by its name
+- Topics are split into partitions. Each partition is ordered and each message within a partition has an incremental id called an offset
+- To identify a message, you have to say Kafka topic name, partition number, offset number
 <img width="438" alt="4" src="https://user-images.githubusercontent.com/4720428/55266539-c51b6b00-523a-11e9-9797-45dc066db90b.png">
+
+- Order is guaranteed only within a partition and not across partitions
+- Data stored at the offsets is only kept for a limited amount of time (default is one week)
+- Once data is written to a partition it cannot be changed (immutable)
+- Data is written randomly to partition 0, 1, or 2, if you don't provide a key
+- An example of a topic is as follows:
+    - You have a fleet of trucks and each truck reports its GPS coordinates to Kafka using a some mechanism
+    - You can create a Kafka topic with name "trucks_gps"
+    - Each truck will send data to Kafka every 20 seconds and each message will contain the ID of the truck and its latitude and longitudinal coordinates
+    - All trucks will send data to that one topic, you do not have one topic per truck
+    - You can create the topic with 10 partitions (arbitarily chosen)
+    - Once you have the data in Kafka, you can consumers of data, say an location dashboard application, or you can have a notification application, if a truck is driving too long without a break send a message asking the driver to take a break
+
+- 
 
     
 
