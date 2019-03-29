@@ -3,7 +3,7 @@ Learn Apache Kafka 2.0 Ecosystem
 
 > ## Contents
 
-**[Apache Kafka Intro](#history)**<br>
+**[Why Apache Kafka](#intro)**<br>
 
 
 <a name="intro"></a>
