@@ -32,7 +32,13 @@ Learn Apache Kafka 2.0 Ecosystem
     - Netflix uses Apache Kafka for real-time movie recommendations
     - Uber uses Apache Kafka for computing real-time surge pricing
     - LinkedIn uses Apache Kafka to make real-time connection recommendations 
- 
+    
+<a name="theory"></a>
+> ## Apache Kafka Thoery
+- A topic in Apache Kafka is the base of everything. A topic is particular stream of data. It is similar to a table in a database. You can have as many topics as you want in Apache Kafka. It's identified by its name. 
+- Topics are split into partitions. Each partition is ordered and each message within a partition has an incremental id called an offset.
+- To identify a message, you have to say Kafka topic name, partition number, offset number.
+
     
 
 
