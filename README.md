@@ -15,7 +15,7 @@ Learn Apache Kafka 2.0 Ecosystem
 - For each integration, you have choose:
     - Protocol - How data is transported (TCP, HTTP, REST, FTP, JDBC..)
     - Data Format - How the data is parsed (Binary, CSV, JSON, Avro, Thrift..)
-    - Data Schema and Evolution - How the data is shaped and how it may change in the future ()
+    - Data Schema and Evolution - How the data is shaped and how it may change in the future 
 - To solve these issues, you can use Apache Kafka
 - Apache Kafka allows ou to decouple your source and target systems
 - You source systems will have their data in Apache Kafka and your target systems will source data from Apache Kafka
