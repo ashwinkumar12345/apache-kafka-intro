@@ -52,6 +52,8 @@ Learn Apache Kafka 2.0 Ecosystem
     - All trucks will send data to that one topic, you do not have one topic per truck
     - You can create the topic with 10 partitions (arbitarily chosen)
     - Once you have the data in Kafka, you can consumers of data, say an location dashboard application, or you can have a notification application, if a truck is driving too long without a break send a message asking the driver to take a break
+<img width="608" alt="5" src="https://user-images.githubusercontent.com/4720428/55267013-ff860780-523c-11e9-9871-a39c8011c649.png">
+
 
 - 
 
