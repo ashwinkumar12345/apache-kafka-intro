@@ -12,6 +12,8 @@ Learn Apache Kafka 2.0 Ecosystem
 <img width="143" alt="1" src="https://user-images.githubusercontent.com/4720428/55256259-df911c80-5219-11e9-80dd-9131a18e8cb9.png">
 
 - After a while, you have many source systems and many target systems and they all have to exchange data with one another and things become complicated
+<img width="650" alt="2" src="https://user-images.githubusercontent.com/4720428/55256338-16673280-521a-11e9-92fe-092071f355f9.png">
+
 - If you have 4 source systems and 6 target systems, you have 24 integrations to write
 - Each time you integrate a source system with a target system, you will an increased load from the connection
 - For each integration, you have choose:
