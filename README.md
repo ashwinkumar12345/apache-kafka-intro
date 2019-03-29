@@ -9,6 +9,7 @@ Learn Apache Kafka 2.0 Ecosystem
 <a name="intro"></a>
 > ## Why Apache Kafka
 - Initially, you have a source system and a target system and they have to exchange data
+<img width="143" alt="1" src="https://user-images.githubusercontent.com/4720428/55256259-df911c80-5219-11e9-80dd-9131a18e8cb9.png">
 - After a while, you have many source systems and many target systems and they all have to exchange data with one another and things become complicated
 - If you have 4 source systems and 6 target systems, you have 24 integrations to write
 - Each time you integrate a source system with a target system, you will an increased load from the connection
