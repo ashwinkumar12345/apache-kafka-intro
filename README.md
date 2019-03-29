@@ -21,10 +21,12 @@ Learn Apache Kafka 2.0 Ecosystem
     - Data Format - How the data is parsed (Binary, CSV, JSON, Avro, Thrift..)
     - Data Schema and Evolution - How the data is shaped and how it may change in the future 
 - To solve these issues, you can use Apache Kafka
-- Apache Kafka allows ou to decouple your source and target systems
+- Apache Kafka allows you to decouple your source and target systems
 - You source systems will have their data in Apache Kafka and your target systems will source data from Apache Kafka
+<img width="648" alt="3" src="https://user-images.githubusercontent.com/4720428/55256392-3565c480-521a-11e9-8e58-7386e4831c9e.png">
+
 - It was created by LinkedIn and is now maintained by Confluent
-- It is distributed, fault-tolerant, resilient and it scales
+- It is distributed, fault-tolerant, resilient, and it scales
 - 35% of all Fortune 500 companies use Apache Kafka
 - Use Cases (Apache Kafka is only a transportation mechanism)
     - Netflix uses Apache Kafka for real-time movie recommendations
