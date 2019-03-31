@@ -63,6 +63,15 @@ Learn Apache Kafka 2.0 Ecosystem
 - For a given partition, you have only one leader that receives and serves data for that partition, the other brokers synchronize that data. If a leader broker goes down, you have an election to choose new leader. The leader and in sync replicas are decided by Zookeeper.
 <img width="622" alt="6" src="https://user-images.githubusercontent.com/4720428/55285499-2bd77c00-5342-11e9-8657-5bd3ff5c1a6f.png">
 
+- Producers write data to topics (made up of partitions)
+- Producers automatically know which broker and partition to write to
+- Producer can choose to recieve acknowledgements for data writes
+    - acks = 0: Producer does not wait for acknowldegment (data loss)
+    - acks = 1: Producer waits for leader acknowledgement (limited data loss)
+    - acks = 2: Leader + replica acknowledgement (no data loss)
+- If message key = null, sends round robin to broker 101, 102, and 103
+- If message key is sent, all messages for that key will always go to the same partition (key hashing)
+
 
 
     
