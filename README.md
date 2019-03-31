@@ -88,6 +88,9 @@ Learn Apache Kafka 2.0 Ecosystem
 - The offsets are commited live in a topic named __consumer_offsets
 - When a consumer in a group has processed data recieved data from Kafka , it commits the offsets
 - This is done because if a consumer goes down , it will be able to read back from where it left off 
+- Kafka Bootstrap Server - means you pnly have to connect to one broker and you are automatically connected to the entire Kafka cluster
+- Zookeeper - Keeps a list of all brokers. If a broker goes down it enables election of a new leader
+- Kafka cannot work without Zookeeper
 
 
 
