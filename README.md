@@ -10,10 +10,11 @@ Learn Apache Kafka 2.0 Ecosystem
 <a name="intro"></a>
 > ## Why Apache Kafka
 - Initially, you have a source system and a target system and they have to exchange data
-<img width="143" alt="1" src="https://user-images.githubusercontent.com/4720428/55256259-df911c80-5219-11e9-80dd-9131a18e8cb9.png">
+<img width="143" alt="1" src="https://user-images.githubusercontent.com/4720428/55256259-df911c80-5219-11e9-80dd-9131a18e8cb9.png"  width="200" height="200">
 
 - After a while, you have many source systems and many target systems and they all have to exchange data with one another and things become complicated
-<img width="650" alt="2" src="https://user-images.githubusercontent.com/4720428/55256338-16673280-521a-11e9-92fe-092071f355f9.png">
+<img width="650" alt="2" src="https://user-images.githubusercontent.com/4720428/55256338-16673280-521a-11e9-92fe-092071f355f9.png"
+ width="200" height="200">
 
 - If you have 4 source systems and 6 target systems, you have 24 integrations to write
 - Each time you integrate a source system with a target system, you will an increased load from the connection
@@ -24,7 +25,8 @@ Learn Apache Kafka 2.0 Ecosystem
 - To solve these issues, you can use Apache Kafka
 - Apache Kafka allows you to decouple your source and target systems
 - You source systems will have their data in Apache Kafka and your target systems will source data from Apache Kafka
-<img width="648" alt="3" src="https://user-images.githubusercontent.com/4720428/55256392-3565c480-521a-11e9-8e58-7386e4831c9e.png">
+<img width="648" alt="3" src="https://user-images.githubusercontent.com/4720428/55256392-3565c480-521a-11e9-8e58-7386e4831c9e.png"
+ width="200" height="200">
 
 - It was created by LinkedIn and is now maintained by Confluent
 - It is distributed, fault-tolerant, resilient, and it scales
