@@ -54,6 +54,14 @@ Learn Apache Kafka 2.0 Ecosystem
     - Once you have the data in Kafka, you can consumers of data, say an location dashboard application, or you can have a notification application, if a truck is driving too long without a break send a message asking the driver to take a break
 <img width="608" alt="5" src="https://user-images.githubusercontent.com/4720428/55267013-ff860780-523c-11e9-9871-a39c8011c649.png">
 
+- A Kafka cluster is composed of multiple brokers (servers)
+- Each broker is identified by its ID
+- Each broker contains some topic partitions
+- If you connect to one broker, you are connected to the entire Kafka cluster
+- A good number to get started is 3 brokers, some large companies have more than 100 brokers
+- For example, you have 3 brokers with IDs 101, 102, 103 (arbitary) and you have two topics: Topic-A with two partitions. When you create a topic, you also need to decide on the replication factor, say 2.
+
+
 
 - 
 
