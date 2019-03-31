@@ -13,6 +13,7 @@ Learn Apache Kafka 2.0 Ecosystem
 <img width="143" alt="1" src="https://user-images.githubusercontent.com/4720428/55256259-df911c80-5219-11e9-80dd-9131a18e8cb9.png"  width="100" height="200">
 
 - After a while, you have many source systems and many target systems and they all have to exchange data with one another and things become complicated
+
 <img width="650" alt="2" src="https://user-images.githubusercontent.com/4720428/55256338-16673280-521a-11e9-92fe-092071f355f9.png"
  width="100" height="200">
 
@@ -25,6 +26,7 @@ Learn Apache Kafka 2.0 Ecosystem
 - To solve these issues, you can use Apache Kafka
 - Apache Kafka allows you to decouple your source and target systems
 - You source systems will have their data in Apache Kafka and your target systems will source data from Apache Kafka
+
 <img width="648" alt="3" src="https://user-images.githubusercontent.com/4720428/55256392-3565c480-521a-11e9-8e58-7386e4831c9e.png"
  width="100" height="200">
 
