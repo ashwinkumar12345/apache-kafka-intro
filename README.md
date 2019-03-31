@@ -71,6 +71,8 @@ Learn Apache Kafka 2.0 Ecosystem
     - acks = 2: Leader + replica acknowledgement (no data loss)
 - If message key = null, sends round robin to broker 101, 102, and 103
 - If message key is sent, all messages for that key will always go to the same partition (key hashing)
+<img width="638" alt="7" src="https://user-images.githubusercontent.com/4720428/55285611-16635180-5344-11e9-9b1b-01513c3e260e.png">
+
 
 
 
