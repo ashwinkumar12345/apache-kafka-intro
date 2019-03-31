@@ -77,6 +77,12 @@ Learn Apache Kafka 2.0 Ecosystem
 - If message key is sent, all messages for that key will always go to the same partition (key hashing)
 <img width="638" alt="7" src="https://user-images.githubusercontent.com/4720428/55285611-16635180-5344-11e9-9b1b-01513c3e260e.png">
 
+- Consumers read data from a topic (identified by name)
+- Consumers know which broker to read from
+- Consumer reads data in order from each partition
+- Consumers read data in consumer groups. Consumer group represents an application
+- Each consumer within a group reads from exclusive partitions
+
 
 
 
