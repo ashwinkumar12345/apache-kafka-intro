@@ -82,7 +82,12 @@ Learn Apache Kafka 2.0 Ecosystem
 - Consumer reads data in order from each partition
 - Consumers read data in consumer groups. Consumer group represents an application
 - Each consumer within a group reads from exclusive partitions
+<img width="690" alt="8" src="https://user-images.githubusercontent.com/4720428/55285816-c8504d00-5347-11e9-83d5-a8f9cb9d5601.png">
 
+- Consumer offsets - Kafka stores offsets at which a consumer group has been reading, checkpointing or bookmarking
+- The offsets are commited live in a topic named __consumer_offsets
+- When a consumer in a group has processed data recieved data from Kafka , it commits the offsets
+- This is done because if a consumer goes down , it will be able to read back from where it left off 
 
 
 
