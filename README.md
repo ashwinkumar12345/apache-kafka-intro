@@ -18,7 +18,7 @@ Learn Apache Kafka 2.0 Ecosystem
  width="100" height="200">
 
 - If you have 4 source systems and 6 target systems, you have 24 integrations to write
-- Each time you integrate a source system with a target system, you will an increased load from the connection
+- Each time you integrate a source system with a target system, you will have an increased load from the connection
 - For each integration, you have choose:
     - Protocol - How data is transported (TCP, HTTP, REST, FTP, JDBC..)
     - Data Format - How the data is parsed (Binary, CSV, JSON, Avro, Thrift..)
