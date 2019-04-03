@@ -40,9 +40,10 @@ Learn Apache Kafka 2.0 Ecosystem
     
 <a name="theory"></a>
 > ## Apache Kafka Theory
-- A topic in Apache Kafka is the base of everything. A topic is particular stream of data. It is similar to a table in a database. You can have as many topics as you want in Apache Kafka. It's identified by its name
-- Topics are split into partitions. Each partition is ordered and each message within a partition has an incremental id called an offset
-- To identify a message, you have to say Kafka topic name, partition number, offset number
+- A topic is particular stream of data. It is similar to a table in a database. You can have as many topics as you want in Apache Kafka. It's identified by its name
+- Topics are split into partitions. 
+- Each partition is split into offsets that have an incremental id called an offset
+- To identify a message, you have to specify the Kafka topic name, partition number, and offset number
 <img width="438" alt="4" src="https://user-images.githubusercontent.com/4720428/55266539-c51b6b00-523a-11e9-9797-45dc066db90b.png">
 
 - Order is guaranteed only within a partition and not across partitions
@@ -84,11 +85,11 @@ Learn Apache Kafka 2.0 Ecosystem
 - Each consumer within a group reads from exclusive partitions
 <img width="690" alt="8" src="https://user-images.githubusercontent.com/4720428/55285816-c8504d00-5347-11e9-83d5-a8f9cb9d5601.png">
 
-- Consumer offsets - Kafka stores offsets at which a consumer group has been reading, checkpointing or bookmarking
-- The offsets are commited live in a topic named __consumer_offsets
+- Consumer offsets - Kafka stores offsets at which a consumer group has been reading, checkpointing, or bookmarking
+- The offsets are commited live into a topic named __consumer_offsets
 - When a consumer in a group has processed data recieved data from Kafka , it commits the offsets
 - This is done because if a consumer goes down , it will be able to read back from where it left off 
-- Kafka Bootstrap Server - means you pnly have to connect to one broker and you are automatically connected to the entire Kafka cluster
+- Kafka Bootstrap Server - You pnly have to connect to one broker and you are automatically connected to the entire Kafka cluster
 - Zookeeper - Keeps a list of all brokers. If a broker goes down it enables election of a new leader
 - Kafka cannot work without Zookeeper
 <img width="635" alt="9" src="https://user-images.githubusercontent.com/4720428/55285971-4ca3cf80-534a-11e9-9ba3-e03a2f8064c4.png">
