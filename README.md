@@ -9,6 +9,8 @@ Learn Apache Kafka 2.0 Ecosystem
 
 <a name="intro"></a>
 > ## Why Apache Kafka
+- You want to process data points as they arrive
+- You could have millions of sources, thousands of destinations, and the demand is for real-time analytics
 - Initially, you have a source system and a target system and they have to exchange data
 <img width="143" alt="1" src="https://user-images.githubusercontent.com/4720428/55256259-df911c80-5219-11e9-80dd-9131a18e8cb9.png"  width="100" height="200">
 
@@ -40,7 +42,7 @@ Learn Apache Kafka 2.0 Ecosystem
     
 <a name="theory"></a>
 > ## Apache Kafka Theory
-- A topic is particular stream of data. It is similar to a table in a database. You can have as many topics as you want in Apache Kafka. It's identified by its name
+- Topics are logical collections of messages. It is similar to a table in a database. You can have as many topics as you want in Apache Kafka. It's identified by its name
 - Topics are split into partitions. 
 - Each partition is split into offsets that have an incremental id called an offset
 - To identify a message, you have to specify the Kafka topic name, partition number, and offset number
@@ -81,8 +83,8 @@ Learn Apache Kafka 2.0 Ecosystem
 - Consumers read data from a topic (identified by name)
 - Consumers know which broker to read from
 - Consumer reads data in order from each partition
-- Consumers read data in consumer groups. Consumer group represents an application
-- Each consumer within a group reads from exclusive partitions
+- Consumers can be grouped as a "Consumer Group" to read data from exclusive partitions for faster performance
+- Consumer group represents an application
 <img width="690" alt="8" src="https://user-images.githubusercontent.com/4720428/55285816-c8504d00-5347-11e9-83d5-a8f9cb9d5601.png">
 
 - Consumer offsets - Kafka stores offsets at which a consumer group has been reading, checkpointing, or bookmarking
