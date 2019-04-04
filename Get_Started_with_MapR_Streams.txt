@@ -1,4 +1,4 @@
-Download and Install MapR Sanbox - https://mapr.com/docs/61/SandboxHadoop/t_install_sandbox_vbox.html
+Download and install the MapR Sanbox - https://mapr.com/docs/61/SandboxHadoop/t_install_sandbox_vbox.html
 Run MapR Installer - https://mapr.com/docs/61/MapRInstaller.html
 Login: root
 Passowrd: mapr
