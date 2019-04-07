@@ -12,6 +12,7 @@ Learn Apache Kafka 2.0 Ecosystem
 - You want to process data points as they arrive
 - Data is considered as an input of a sequence of events arriving sequentially in time
 ![10](https://user-images.githubusercontent.com/4720428/55677982-e3badb00-58a6-11e9-9f7e-b211db3b8bbe.png)
+- You have to process each event independently, but they can be processed in parallel
 - You could have millions of sources, thousands of destinations, and the demand is for real-time analytics
 - Initially, you have a source system and a target system and they have to exchange data
 <img width="143" alt="1" src="https://user-images.githubusercontent.com/4720428/55256259-df911c80-5219-11e9-80dd-9131a18e8cb9.png"  width="100" height="200">
