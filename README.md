@@ -104,7 +104,15 @@ Learn Apache Kafka 2.0 Ecosystem
 - Kafka cannot work without Zookeeper
 <img width="635" alt="9" src="https://user-images.githubusercontent.com/4720428/55285971-4ca3cf80-534a-11e9-9ba3-e03a2f8064c4.png">
 
-
+<a name="use"></a>
+> ## Apache Kafka Use Cases
+- Video Analytics - Netlix
+ - Make sure the user can resume the video where they left it off
+ - Build a user profile in real time
+ - Recommend the user the next show in real time
+ - Store all data in analytics store
+ 
+ 
     
 
 
