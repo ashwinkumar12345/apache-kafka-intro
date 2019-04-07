@@ -55,6 +55,7 @@ Learn Apache Kafka 2.0 Ecosystem
 <img width="438" alt="4" src="https://user-images.githubusercontent.com/4720428/55266539-c51b6b00-523a-11e9-9797-45dc066db90b.png">
 
 - Order is guaranteed only within a partition and not across partitions
+- Because of this it is impossible to restore the correct temporal sequence of events easily
 - Data stored at the offsets is only kept for a limited amount of time (default is one week)
 - Once data is written to a partition it cannot be changed (immutable)
 - Data is written randomly to partition 0, 1, or 2, if you don't provide a key
