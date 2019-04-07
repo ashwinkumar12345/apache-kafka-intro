@@ -72,10 +72,11 @@ Learn Apache Kafka 2.0 Ecosystem
 
 - Producers write data to topics (made up of partitions)
 - Producers automatically know which broker and partition to write to
-- Producer can choose to recieve acknowledgements for data writes
-    - acks = 0: Producer does not wait for acknowldegment (data loss)
-    - acks = 1: Producer waits for leader acknowledgement (limited data loss)
-    - acks = 2: Leader + replica acknowledgement (no data loss)
+- Producer can choose to recieve acknowledgements for data writes (delivery semantics)
+- Delivery semantics indicates the integrity of data as it moves from point A to point B:
+    - acks = 0: Producer does not wait for acknowldegment (data loss) - At most once
+    - acks = 1: Producer waits for leader acknowledgement (limited data loss) - At least once
+    - acks = 2: Leader + replica acknowledgement (no data loss) - Exactly once, expensive
 - If message key = null, sends round robin to broker 101, 102, and 103
 - If message key is sent, all messages for that key will always go to the same partition (key hashing)
 <img width="638" alt="7" src="https://user-images.githubusercontent.com/4720428/55285611-16635180-5344-11e9-9b1b-01513c3e260e.png">
