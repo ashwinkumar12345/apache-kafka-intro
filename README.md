@@ -15,13 +15,16 @@ Learn Apache Kafka 2.0 Ecosystem
 - You have to process each event independently. This is called an event-based approach
 - Initially, a lambda architecture was used
 
-- You also have micro-batching where you use a sliding window to group events
-- You have to select based on the tradeoff between throughput and latency
-- You could have millions of sources, thousands of destinations, and the demand is for real-time analytics
-- Initially, you have a source system and a target system and they have to exchange data
+![11](https://user-images.githubusercontent.com/4720428/56307196-22e3fa00-60f9-11e9-92b9-1053876d78c3.png)
+
+- In a lambda architecture, data is stored in both HDFS and a stream processing system such as Apache Storm that was developed at Twitter
+- Apache Storm processes each event as it comes in, you have issues such as events being procesed out of order, getting lost de to node failures
+- You would still need to run nightly MapReduce jobs to reconcile these errors that occur in real-time event processing
+- Managing a lambda architecture was really complex as you had to manage a Hadoop cluster and a Storm cluster
+- Another issue with this architecture is that you have a source system and a target system and they have to exchange data
 <img width="143" alt="1" src="https://user-images.githubusercontent.com/4720428/55256259-df911c80-5219-11e9-80dd-9131a18e8cb9.png"  width="100" height="200">
 
-- After a while, you have many source systems and many target systems and they all have to exchange data with one another and things become complicated
+- After a while, you have many source systems and many target systems and they all have to exchange data with one another
 
 <img width="650" alt="2" src="https://user-images.githubusercontent.com/4720428/55256338-16673280-521a-11e9-92fe-092071f355f9.png"
  width="100" height="200">
