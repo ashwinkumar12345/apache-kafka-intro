@@ -9,10 +9,12 @@ Learn Apache Kafka 2.0 Ecosystem
 
 <a name="intro"></a>
 > ## Why Apache Kafka
-- You want to process data points as they arrive
+- To react to events as they happen, you need to process data points as they arrive
 - Data is considered as an input of a sequence of events arriving sequentially in time
 ![10](https://user-images.githubusercontent.com/4720428/55677982-e3badb00-58a6-11e9-9f7e-b211db3b8bbe.png)
-- You have to process each event independently, but they can be processed in parallel. This is called an event-based approach
+- You have to process each event independently. This is called an event-based approach
+- Initially, a lambda architecture was used
+
 - You also have micro-batching where you use a sliding window to group events
 - You have to select based on the tradeoff between throughput and latency
 - You could have millions of sources, thousands of destinations, and the demand is for real-time analytics
