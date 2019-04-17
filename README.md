@@ -54,7 +54,7 @@ Learn Apache Kafka 2.0 Ecosystem
 <a name="theory"></a>
 > ## Apache Kafka Theory
 - Topics are logical collections of messages. It is similar to a table in a database. You can have as many topics as you want in Apache Kafka. It's identified by its name
-- Topics are split into partitions. 
+- Topics are split into partitions for parallelism 
 - Each partition is split into offsets that have an incremental id called an offset
 - To identify a message, you have to specify the Kafka topic name, partition number, and offset number
 <img width="438" alt="4" src="https://user-images.githubusercontent.com/4720428/55266539-c51b6b00-523a-11e9-9797-45dc066db90b.png">
@@ -64,6 +64,7 @@ Learn Apache Kafka 2.0 Ecosystem
 - Data stored at the offsets is only kept for a limited amount of time (default is one week)
 - Once data is written to a partition it cannot be changed (immutable)
 - Data is written randomly to partition 0, 1, or 2, if you don't provide a key
+- The key is hashed to specify which partition to write to, for example all messages for trucks in a given region can be written to a given partition
 - An example of a topic is as follows:
     - You have a fleet of trucks and each truck reports its GPS coordinates to Kafka using a some mechanism
     - You can create a Kafka topic with name "trucks_gps"
@@ -83,7 +84,7 @@ Learn Apache Kafka 2.0 Ecosystem
 - For a given partition, you have only one leader that receives and serves data for that partition, the other brokers synchronize that data. If a leader broker goes down, you have an election to choose new leader. The leader and in sync replicas are decided by Zookeeper.
 <img width="622" alt="6" src="https://user-images.githubusercontent.com/4720428/55285499-2bd77c00-5342-11e9-8657-5bd3ff5c1a6f.png">
 
-- Producers write data to topics (made up of partitions)
+- Producers write data to topics (made up of partitions), queue messages at the head of the topic
 - Producers automatically know which broker and partition to write to
 - Producer can choose to recieve acknowledgements for data writes (delivery semantics)
 - Delivery semantics indicates the integrity of data as it moves from point A to point B:
@@ -94,15 +95,20 @@ Learn Apache Kafka 2.0 Ecosystem
 - If message key is sent, all messages for that key will always go to the same partition (key hashing)
 <img width="638" alt="7" src="https://user-images.githubusercontent.com/4720428/55285611-16635180-5344-11e9-9b1b-01513c3e260e.png">
 
-- Consumers read data from a topic (identified by name)
+- Consumers read data from a topic (identified by name), dequeue messages from the tail of the topic
 - Consumers know which broker to read from
 - Consumer reads data in order from each partition
-- Consumers can be grouped as a "Consumer Group" to read data from exclusive partitions for faster performance
+- A single consumer can read from only one partition so there is no contention among consumers
+- For example, if you have a topic that has 3 partitions and 2 consumers, 1 consumer will read from 2 partitions and 1 consumer will read from 1 partition, now if you have 3 partitions and 4 consumers, one consumer will not get any messages, so the number of consumers reading from a topic must be less than the number of partitions in that topic
+- In this case, Kafka rebalances partitions which causes delay in the messages read by consumers
+- Consumer Groups are a group of consumers working together
+- Consumers in a consumer group read data from exclusive partitions for faster performance, each consumer would get a subset of the messages
 - Consumer group represents an application
 <img width="690" alt="8" src="https://user-images.githubusercontent.com/4720428/55285816-c8504d00-5347-11e9-83d5-a8f9cb9d5601.png">
 
-- Consumer offsets - Kafka stores offsets at which a consumer group has been reading, checkpointing, or bookmarking
+- Consumer offsets - Kafka stores offsets at which a consumer group has been reading to help the consumer group keep track of where it is as it's reading data from a topic
 - The offsets are commited live into a topic named __consumer_offsets
+- This is called cursor persistence, it's used after a stop for a consumer to start reading from where it left off
 - When a consumer in a group has processed data recieved data from Kafka , it commits the offsets
 - This is done because if a consumer goes down , it will be able to read back from where it left off 
 - Kafka Bootstrap Server - You pnly have to connect to one broker and you are automatically connected to the entire Kafka cluster
