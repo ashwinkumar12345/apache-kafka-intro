@@ -73,6 +73,7 @@ Learn Apache Kafka 2.0 Ecosystem
     - Once you have the data in Kafka, you can consumers of data, say an location dashboard application, or you can have a notification application, if a truck is driving too long without a break send a message asking the driver to take a break
 <img width="608" alt="5" src="https://user-images.githubusercontent.com/4720428/55267013-ff860780-523c-11e9-9871-a39c8011c649.png">
 
+- Instead of trucks, you could think of fitbit devices sending GPS coordinates to a Kafka server, and have a consumer application to use GPS coordinates to calculate a person's velocity.
 - A Kafka cluster is composed of multiple brokers (servers)
 - Each broker is identified by its ID
 - Each broker contains some topic partitions
