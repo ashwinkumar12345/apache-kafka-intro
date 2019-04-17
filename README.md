@@ -5,6 +5,7 @@ Learn Apache Kafka 2.0 Ecosystem
 
 **[Why Apache Kafka](#intro)**<br>
 **[Apache Kafka Theory](#theory)**<br>
+**[Apache Kafka API](#api)**<br>
 
 
 <a name="intro"></a>
@@ -115,6 +116,16 @@ Learn Apache Kafka 2.0 Ecosystem
 - Zookeeper - Keeps a list of all brokers. If a broker goes down it enables election of a new leader
 - Kafka cannot work without Zookeeper
 <img width="635" alt="9" src="https://user-images.githubusercontent.com/4720428/55285971-4ca3cf80-534a-11e9-9ba3-e03a2f8064c4.png">
+
+<a name="api"></a>
+> ## Apache Kafka API
+- Producer sending messages
+   - Construct a producer object
+   - Construct a producer record object, specifies topic name that you want send messages to and optionally key, and the value of the message (V) 
+   - Producer.send(record)
+- Consumer consuming messages
+   - Construct a consumer object that subscribes to various topics
+   - Construct a consumer record object that contains keys and values, you can also get additional information about the message
 
 <a name="use"></a>
 > ## Apache Kafka Use Cases
