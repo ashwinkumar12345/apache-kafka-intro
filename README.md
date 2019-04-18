@@ -119,13 +119,19 @@ Learn Apache Kafka 2.0 Ecosystem
 
 <a name="api"></a>
 > ## Apache Kafka API
-- Producer sending messages
+- Producer sending messages:
    - Construct a producer object
    - Construct a producer record object, specifies topic name that you want send messages to and optionally key, and the value of the message (V) 
    - Producer.send(record)
-- Consumer consuming messages
+- Consumer consuming messages:
    - Construct a consumer object that subscribes to various topics
    - Construct a consumer record object that contains keys and values, you can also get additional information about the message
+- Significant properties that you must specify in your producer or consumer:
+   - client.id: Identify producers and consumers
+   - group.id: Consumer group ID. Need for cursors
+   - auto.offset.reset: If a consumer starts up and it has no existing cursor what position should it start at the queue, beginning or latest
+   - auto.commit.interval.ms: How frequently a cursor is committed
+   - 
 
 <a name="use"></a>
 > ## Apache Kafka Use Cases
