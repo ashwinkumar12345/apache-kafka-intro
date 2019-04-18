@@ -130,8 +130,7 @@ Learn Apache Kafka 2.0 Ecosystem
    - client.id: Identify producers and consumers
    - group.id: Consumer group ID. Need for cursors
    - auto.offset.reset: If a consumer starts up and it has no existing cursor what position should it start at the queue, beginning or latest
-   - auto.commit.interval.ms: How frequently a cursor is committed
-   - 
+   - auto.commit.interval.ms: How frequently a cursor is committed automatically
 
 <a name="use"></a>
 > ## Apache Kafka Use Cases
