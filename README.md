@@ -14,6 +14,11 @@ Learn Apache Kafka 2.0 Ecosystem
 **[Consumers](#consumer)**<br>
 **[Kafka Streaming Architecture](#architecture)**<br>
 **[Kafka Java Demo](#javademo)**<br>
+**[Kafka Demo – Part 1](#javademo1)**<br>
+**[Kafka Eco Components](#eco)**<br>
+**[Admin](#admin)**<br>
+**[Use Cases 1 - MovieFlix](#usecase1)**<br>
+**[Use Cases 2 - TrendBook](#usecase2)**<br>
 
 
 <a name="intro"></a>
@@ -169,7 +174,7 @@ C:\kafka_2.12-2.2.0> kafka-topics.bat --zookeeper 127.0.0.1:2181 --topic first_t
 ```
 C:\kafka_2.12-2.2.0> kafka-console-consumer.bat --bootstrap-server 127.0.0.1:9092 --topic twitter_tweets
 ```
-<a name="javademo"></a>
+<a name="javademo1"></a>
 > ## Kafka Demo – Part 1
 
 ![16](https://user-images.githubusercontent.com/4720428/56758586-dbd6b400-674b-11e9-835f-00c4bd64a6de.png)
