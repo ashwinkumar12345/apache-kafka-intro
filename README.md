@@ -71,6 +71,8 @@ Learn Apache Kafka 2.0 Ecosystem
   - Data stored at the offsets is only kept for a limited amount of time
   - Order is guaranteed only within a partition and not across partitions
   - Data is written randomly to partition 0, 1, or 2, if you don't provide a key
+  
+  <img width="438" alt="4" src="https://user-images.githubusercontent.com/4720428/56757751-d7110080-6749-11e9-9909-ef818b752255.png">
 
 <a name="streamingexample"></a>
 > ## Streaming Example
