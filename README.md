@@ -32,8 +32,12 @@ Learn Apache Kafka 2.0 Ecosystem
   - Events processed out of order
   - Events are lost due to node failures
   - Manage both a Hadoop cluster and a Storm cluster
+  
   ![14](https://user-images.githubusercontent.com/4720428/56757501-39b5cc80-6749-11e9-8695-bb1a40ef534f.png)
+  
   - Integrate source and target systems
+  
+  
   <img width="650" alt="2" src="https://user-images.githubusercontent.com/4720428/56757581-6cf85b80-6749-11e9-8d1e-ca1098abf907.png">
   
   <a name="streamingarchitecture"></a>
@@ -46,6 +50,8 @@ Learn Apache Kafka 2.0 Ecosystem
 - Popular Messaging Systems
   - Apache Kafka (Confluent)
   - MapR Event Store for Apache Kafka (MapR)
+  
+  ![15](https://user-images.githubusercontent.com/4720428/56757653-9ca76380-6749-11e9-927a-433f77b77c1a.png)
   
    <a name="concepts"></a>
 > ## Kafka / MapR Stream Concepts
