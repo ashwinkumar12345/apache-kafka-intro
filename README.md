@@ -132,6 +132,8 @@ Learn Apache Kafka 2.0 Ecosystem
    - acks = 0: Producer does not wait for acknowledgment (data loss) - At most once
    - acks = 1: Producer waits for leader acknowledgement (limited data loss) - At least once
    - acks = 2: Producer waits for leader + replica acknowledgement (no data loss) - Exactly once, expensive
+
+<img width="638" alt="7" src="https://user-images.githubusercontent.com/4720428/56758357-489d7e80-674b-11e9-98b1-51f6f13eeb1a.png">
    
 <a name="consumer"></a>
 > ## Consumers
