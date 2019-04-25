@@ -172,6 +172,8 @@ C:\kafka_2.12-2.2.0> kafka-console-consumer.bat --bootstrap-server 127.0.0.1:909
 <a name="javademo"></a>
 > ## Kafka Demo – Part 1
 
+![16](https://user-images.githubusercontent.com/4720428/56758586-dbd6b400-674b-11e9-835f-00c4bd64a6de.png)
+
 <a name="eco"></a>
 > ## Kafka Eco Components
 - Kafka Connect Source
