@@ -64,7 +64,18 @@ Learn Apache Kafka 2.0 Ecosystem
   - Each message constitutes the truck ID and coordinates
   - All trucks will send data to that one topic, you do not have one topic per truck
   - Once you have the data in Kafka, you can write a consumer application, say a location dashboard application or an application to calculate velocity of each truck
-
+  
+<a name="clidemo"></a>
+> ## Kafka CLI (MapR Sandbox) Demo
+- Create a Stream
+"""
+test
+"""
+  - Create a Kafka topic with name "trucks_gps“ with 10 partitions (arbitrarily chosen)
+  - GPS coordinates sent to Kafka every 20 seconds
+  - Each message constitutes the truck ID and coordinates
+  - All trucks will send data to that one topic, you do not have one topic per truck
+  - Once you have the data in Kafka, you can write a consumer application, say a location dashboard application or an application to calculate velocity of each truck
 
  
  
