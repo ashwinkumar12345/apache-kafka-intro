@@ -3,9 +3,11 @@ Learn Apache Kafka 2.0 Ecosystem
 
 > ## Contents
 
-**[Why Apache Kafka](#intro)**<br>
-**[Apache Kafka Theory](#theory)**<br>
-**[Apache Kafka API](#api)**<br>
+**[Why Do We Need Real Time?](#intro)**<br>
+**[Batch to Real Time => Lambda Architecture](#batchtorealtime)**<br>
+**[Streaming Architecture](#streamingarchitecture)**<br>
+**[Kafka / MapR Stream Concepts](#concepts)**<br>
+**[Streaming Example](#streamingexample)**<br>
 
 
 <a name="intro"></a>
@@ -35,7 +37,7 @@ Learn Apache Kafka 2.0 Ecosystem
   - Apache Kafka (Confluent)
   - MapR Event Store for Apache Kafka (MapR)
   
-   <a name="streamingarchitecture"></a>
+   <a name="concepts"></a>
 > ## Kafka / MapR Stream Concepts
 - Topic
   - Logical collection of messages or events
@@ -54,7 +56,7 @@ Learn Apache Kafka 2.0 Ecosystem
   - Order is guaranteed only within a partition and not across partitions
   - Data is written randomly to partition 0, 1, or 2, if you don't provide a key
 
-<a name="StreamingExample"></a>
+<a name="streamingexample"></a>
 > ## Streaming Example
 - Each truck reports its GPS coordinates to Kafka using a some mechanism
   - Create a Kafka topic with name "trucks_gps“ with 10 partitions (arbitrarily chosen)
