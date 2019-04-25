@@ -68,14 +68,66 @@ Learn Apache Kafka 2.0 Ecosystem
 <a name="clidemo"></a>
 > ## Kafka CLI (MapR Sandbox) Demo
 - Create a Stream
-"""
-test
-"""
-  - Create a Kafka topic with name "trucks_gps“ with 10 partitions (arbitrarily chosen)
-  - GPS coordinates sent to Kafka every 20 seconds
-  - Each message constitutes the truck ID and coordinates
-  - All trucks will send data to that one topic, you do not have one topic per truck
-  - Once you have the data in Kafka, you can write a consumer application, say a location dashboard application or an application to calculate velocity of each truck
+```
+[root@maprdemo mapr]# maprcli stream create -path /sample-stream
+```
+- Create a Topic
+```
+[root@maprdemo mapr]# maprcli stream topic create -path /sample-stream  -topic fast-messages --partitions 3
+```
+-List the Topic
+```
+[root@maprdemo mapr]# maprcli stream topic list -path /sample-stream
+```
+-List the Topic
+```
+[root@maprdemo mapr]# maprcli stream topic list -path /sample-stream
+```
+-Produce to the Topic
+```
+[root@maprdemo bin]# ./kafka-console-producer.sh --broker-list 127.0.0.1:9092 --topic /sample-stream:fast-messages
+```
+-Consume from the Topic
+```
+[root@maprdemo bin]# ./kafka-console-consumer.sh --bootstrap-server 127.0.0.1:9092 --topic /sample-stream:fast-messages
+```
+
+<a name="backend"></a>
+> ## Kafka Backend
+- A topic or stream is split across the cluster
+  - Broker or server: 3 (IDs 101, 102, 103) 
+  - Topics: 1 (Topic-A) 
+  - Partitions: 2 (0 and 1) 
+  - Replication factor: 1
+- For a given partition, you have only one leader that receives and serves data for that partition, the other brokers synchronize that data
+- If a leader broker goes down, you have an election to choose new leader. The leader and in sync replicas are decided by Zookeeper
+
+<a name="producer"></a>
+> ## Producers
+- Write data to topics
+  - Producers automatically know which broker and partition to write to
+  - Delivery semantics indicates the integrity of data as it moves from point A to point B:
+   - acks = 0: Producer does not wait for acknowledgment (data loss) - At most once
+   - acks = 1: Producer waits for leader acknowledgement (limited data loss) - At least once
+   - acks = 2: Producer waits for leader + replica acknowledgement (no data loss) - Exactly once, expensive
+   
+<a name="consumer"></a>
+> ## Consumers
+- Read data from a topic 
+  - A single consumer can read from only one partition so there is no contention among consumers
+  - Consumer Groups are a group of consumers working together
+  - Consumers in a consumer group read data from exclusive partitions for faster performance, each consumer would get a subset of the messages
+  - Consumer group represents an application
+  - Consumer offsets - Kafka stores offsets at which a consumer group has been reading to help the consumer group keep track of where it is as it's reading data from a topic
+  
+<a name="architecture"></a>
+> ## Kafka Streaming Architecture 
+
+
+
+
+
+
 
  
  
