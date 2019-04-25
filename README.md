@@ -8,6 +8,12 @@ Learn Apache Kafka 2.0 Ecosystem
 **[Streaming Architecture](#streamingarchitecture)**<br>
 **[Kafka / MapR Stream Concepts](#concepts)**<br>
 **[Streaming Example](#streamingexample)**<br>
+**[Kafka CLI (MapR Sandbox) Demo](#clidemo)**<br>
+**[Kafka Backend](#backend)**<br>
+**[Producers](#producer)**<br>
+**[Consumers](#consumer)**<br>
+**[Kafka Streaming Architecture](#architecture)**<br>
+**[Kafka Java Demo](#javademo)**<br>
 
 
 <a name="intro"></a>
@@ -123,8 +129,57 @@ Learn Apache Kafka 2.0 Ecosystem
 <a name="architecture"></a>
 > ## Kafka Streaming Architecture 
 
+<a name="javademo"></a>
+> ## Kafka Java Demo
+- Start Zookeeper
+```
+C:\kafka_2.12-2.2.0> zookeeper-server-start.bat config\zookeeper.properties
+```
+- Start Kafka Server
+```
+C:\kafka_2.12-2.2.0> kafka-server-start.bat config\server.properties
+```
+-Create a Topic
+```
+C:\kafka_2.12-2.2.0> kafka-topics.bat --zookeeper 127.0.0.1:2181 --topic first_topic --create --partitions 3 --replication-factor 1
+```
+-Start a Consumer
+```
+C:\kafka_2.12-2.2.0> kafka-console-consumer.bat --bootstrap-server 127.0.0.1:9092 --topic twitter_tweets
+```
+<a name="javademo"></a>
+> ## Kafka Demo – Part 1
 
+<a name="eco"></a>
+> ## Kafka Eco Components
+- Kafka Connect Source
+- Kafka Connect Sink
+- KStreams (Spark Streaming or Apache Flink for advanced computation)
+- KSQL
 
+<a name="javademo2"></a>
+> ## Kafka Demo – Part 2
+
+<a name="admin"></a>
+> ## Kafka Admin
+-Kafka Cluster Setup
+- Isolate Zookeeper and Kafka brokers
+- Setup Kafka Monitoring (ES + Kibana, Confluent Control Center…)
+- Setup Security
+- Setup MirrorMaker (Manage Replication)
+-Kafka Cluster Setup
+- Isolate Zookeeper and Kafka brokers
+- Setup Kafka Monitoring (ES + Kibana, Confluent Control Center…)
+- Setup Security
+- Setup MirrorMaker (Manage Replication)
+
+<a name="admin"></a>
+> ## Kafka Admin
+-Kafka Cluster Setup
+- Isolate Zookeeper and Kafka brokers
+- Setup Kafka Monitoring (ES + Kibana, Confluent Control Center…)
+- Setup Security
+- Setup MirrorMaker (Manage Replication)
 
 
 
