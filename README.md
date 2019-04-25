@@ -184,6 +184,8 @@ C:\kafka_2.12-2.2.0> kafka-console-consumer.bat --bootstrap-server 127.0.0.1:909
 <a name="javademo2"></a>
 > ## Kafka Demo – Part 2
 
+![17](https://user-images.githubusercontent.com/4720428/56758671-13456080-674c-11e9-96ff-447d4e7e1408.png)
+
 <a name="admin"></a>
 > ## Admin
 - Kafka Admin
