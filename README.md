@@ -208,6 +208,8 @@ C:\kafka_2.12-2.2.0> kafka-console-consumer.bat --bootstrap-server 127.0.0.1:909
 <a name="usecase2"></a>
 > ## Use Cases 2 - TrendBook
 
+![19](https://user-images.githubusercontent.com/4720428/56758850-6d462600-674c-11e9-869b-172b33d3b378.png)
+
 
 
 
