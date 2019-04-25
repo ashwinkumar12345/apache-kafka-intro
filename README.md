@@ -122,6 +122,8 @@ Learn Apache Kafka 2.0 Ecosystem
 - For a given partition, you have only one leader that receives and serves data for that partition, the other brokers synchronize that data
 - If a leader broker goes down, you have an election to choose new leader. The leader and in sync replicas are decided by Zookeeper
 
+<img width="622" alt="6" src="https://user-images.githubusercontent.com/4720428/56758312-2dcb0a00-674b-11e9-9532-eac3e4876624.png">
+
 <a name="producer"></a>
 > ## Producers
 - Write data to topics
