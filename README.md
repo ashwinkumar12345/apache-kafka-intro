@@ -144,6 +144,8 @@ Learn Apache Kafka 2.0 Ecosystem
   - Consumer group represents an application
   - Consumer offsets - Kafka stores offsets at which a consumer group has been reading to help the consumer group keep track of where it is as it's reading data from a topic
   
+<img width="690" alt="8" src="https://user-images.githubusercontent.com/4720428/56758392-62d75c80-674b-11e9-92a6-439b86f60a58.png">
+  
 <a name="architecture"></a>
 > ## Kafka Streaming Architecture 
 
