@@ -16,6 +16,7 @@ Learn Apache Kafka 2.0 Ecosystem
 **[Kafka Java Demo](#javademo)**<br>
 **[Kafka Demo – Part 1](#javademo1)**<br>
 **[Kafka Eco Components](#eco)**<br>
+**[Kafka Demo – Part 2](#javademo2)**<br>
 **[Admin](#admin)**<br>
 **[Use Cases 1 - MovieFlix](#usecase1)**<br>
 **[Use Cases 2 - TrendBook](#usecase2)**<br>
