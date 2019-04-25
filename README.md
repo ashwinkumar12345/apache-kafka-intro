@@ -149,6 +149,8 @@ Learn Apache Kafka 2.0 Ecosystem
 <a name="architecture"></a>
 > ## Kafka Streaming Architecture 
 
+<img width="635" alt="9" src="https://user-images.githubusercontent.com/4720428/56758441-826e8500-674b-11e9-913d-9d8fb3d1b493.png">
+
 <a name="javademo"></a>
 > ## Kafka Java Demo
 - Start Zookeeper
