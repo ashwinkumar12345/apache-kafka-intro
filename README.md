@@ -34,6 +34,7 @@ Learn Apache Kafka 2.0 Ecosystem
   - Manage both a Hadoop cluster and a Storm cluster
   ![14](https://user-images.githubusercontent.com/4720428/56757501-39b5cc80-6749-11e9-8695-bb1a40ef534f.png)
   - Integrate source and target systems
+  <img width="650" alt="2" src="https://user-images.githubusercontent.com/4720428/56757581-6cf85b80-6749-11e9-8d1e-ca1098abf907.png">
   
   <a name="streamingarchitecture"></a>
 > ## Streaming Architecture
