@@ -32,6 +32,8 @@ Learn Apache Kafka 2.0 Ecosystem
   - Events processed out of order
   - Events are lost due to node failures
   - Manage both a Hadoop cluster and a Storm cluster
+  ![14](https://user-images.githubusercontent.com/4720428/56757501-39b5cc80-6749-11e9-8695-bb1a40ef534f.png)
+  - Integrate source and target systems
   
   <a name="streamingarchitecture"></a>
 > ## Streaming Architecture
