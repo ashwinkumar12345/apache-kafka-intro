@@ -203,6 +203,8 @@ C:\kafka_2.12-2.2.0> kafka-console-consumer.bat --bootstrap-server 127.0.0.1:909
 <a name="usecase1"></a>
 > ## Use Cases 1 - MovieFlix
 
+![18](https://user-images.githubusercontent.com/4720428/56758746-396b0080-674c-11e9-91b1-4b6af1da246a.png)
+
 <a name="usecase2"></a>
 > ## Use Cases 2 - TrendBook
 
