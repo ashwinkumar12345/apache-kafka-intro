@@ -25,7 +25,7 @@ Learn Apache Kafka 2.0 Ecosystem
   - Manage both a Hadoop cluster and a Storm cluster
   
   <a name="streamingarchitecture"></a>
-> ## Batch to Real Time => Lambda Architecture
+> ## Streaming Architecture
 - Is a Message Data Bus 
 - Benefits
   - Only one cluster
