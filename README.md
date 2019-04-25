@@ -161,25 +161,25 @@ C:\kafka_2.12-2.2.0> kafka-console-consumer.bat --bootstrap-server 127.0.0.1:909
 > ## Kafka Demo – Part 2
 
 <a name="admin"></a>
-> ## Kafka Admin
--Kafka Cluster Setup
-- Isolate Zookeeper and Kafka brokers
-- Setup Kafka Monitoring (ES + Kibana, Confluent Control Center…)
-- Setup Security
-- Setup MirrorMaker (Manage Replication)
--Kafka Cluster Setup
-- Isolate Zookeeper and Kafka brokers
-- Setup Kafka Monitoring (ES + Kibana, Confluent Control Center…)
-- Setup Security
-- Setup MirrorMaker (Manage Replication)
+> ## Admin
+- Kafka Admin
+    -Kafka Cluster Setup
+    - Isolate Zookeeper and Kafka brokers
+    - Setup Kafka Monitoring (ES + Kibana, Confluent Control Center…)
+    - Setup Security
+    - Setup MirrorMaker (Manage Replication)
+- MapR Admin
+    - MapR Cluster
+    - MapR Monitoring
+    - Secured by default
 
-<a name="admin"></a>
-> ## Kafka Admin
--Kafka Cluster Setup
-- Isolate Zookeeper and Kafka brokers
-- Setup Kafka Monitoring (ES + Kibana, Confluent Control Center…)
-- Setup Security
-- Setup MirrorMaker (Manage Replication)
+
+<a name="usecase1"></a>
+> ## Use Cases 1 - MovieFlix
+
+<a name="usecase2"></a>
+> ## Use Cases 2 - TrendBook
+
 
 
 
