@@ -83,6 +83,8 @@ Learn Apache Kafka 2.0 Ecosystem
   - All trucks will send data to that one topic, you do not have one topic per truck
   - Once you have the data in Kafka, you can write a consumer application, say a location dashboard application or an application to calculate velocity of each truck
   
+  <img width="608" alt="5" src="https://user-images.githubusercontent.com/4720428/56758255-08d69700-674b-11e9-971f-9a9e2bea5ca8.png">
+  
 <a name="clidemo"></a>
 > ## Kafka CLI (MapR Sandbox) Demo
 - Create a Stream
