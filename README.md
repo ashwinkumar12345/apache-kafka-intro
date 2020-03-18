@@ -32,33 +32,30 @@ Data is a continuous stream of events. An event is a significant change in state
 <a name="batchtorealtime"></a>
 > ## Batch to Real Time => Lambda Architecture
 
-Twitter used to store data in HDFS and in Apache Storm.
-
-They found that this system had drawbacks:
+Twitter used to write their data to an HDFS and an Apache Storm cluster.
+Writing data to both clusters had drawbacks:
 
  - Events were processed out of order
  - Events were lost because of node failures
- - Managing an HDFS cluster and a Storm cluster was difficult
+ - Keeping both clusters in sync was difficult
   
   ![14](https://user-images.githubusercontent.com/4720428/56757501-39b5cc80-6749-11e9-8695-bb1a40ef534f.png)
   
-So, it became important to find a reliable way to integrate source and target systems:
-  
-  <img width="650" alt="2" src="https://user-images.githubusercontent.com/4720428/56757581-6cf85b80-6749-11e9-8d1e-ca1098abf907.png">
+It became important to find a reliable way to integrate source and target systems without needing to maintain data in two separate places.
   
   <a name="streamingarchitecture"></a>
 > ## Streaming Architecture
 
-A message bus was the solution to integrate source and target systems.
-The message bus was distributed, fault tolerant, resilient, scalable.
+A message bus was the solution.
 
-With a message bus:
+The message bus is distributed, fault tolerant, resilient, and scalable.
 
-  - You could use a single cluster.
-  - You could decouple source and target systems.
+With a message bus, you could decouple your source and target systems.
 
-- Popular Messaging Systems
-  - Apache Kafka (Confluent)
+
+- Popular Messaging Systems:
+
+  - Apache Kafka was initially developed at LinkedIn. It's now managed by Confluent.
   - MapR Event Store for Apache Kafka (MapR)
   
   ![15](https://user-images.githubusercontent.com/4720428/56757653-9ca76380-6749-11e9-927a-433f77b77c1a.png)
