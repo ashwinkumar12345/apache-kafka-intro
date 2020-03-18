@@ -31,26 +31,32 @@ Data is a continuous stream of events. An event is a significant change in state
     
 <a name="batchtorealtime"></a>
 > ## Batch to Real Time => Lambda Architecture
+
 Twitter used to store data in HDFS and in Apache Storm.
+
 They found that this system had drawbacks:
+
  - Events were processed out of order
  - Events were lost because of node failures
  - Managing an HDFS cluster and a Storm cluster was difficult
   
   ![14](https://user-images.githubusercontent.com/4720428/56757501-39b5cc80-6749-11e9-8695-bb1a40ef534f.png)
   
-  - Integrate source and target systems
-  
+So, it became important to find a reliable way to integrate source and target systems:
   
   <img width="650" alt="2" src="https://user-images.githubusercontent.com/4720428/56757581-6cf85b80-6749-11e9-8d1e-ca1098abf907.png">
   
   <a name="streamingarchitecture"></a>
 > ## Streaming Architecture
-- Is a Message Data Bus 
-- Benefits
-  - Only one cluster
-  - Decouples source and target systems
-  - Distributed, fault tolerant, resilient, scalable
+
+A message bus was the solution to integrate source and target systems.
+The message bus was distributed, fault tolerant, resilient, scalable.
+
+With a message bus:
+
+  - You could use a single cluster.
+  - You could decouple source and target systems.
+
 - Popular Messaging Systems
   - Apache Kafka (Confluent)
   - MapR Event Store for Apache Kafka (MapR)
