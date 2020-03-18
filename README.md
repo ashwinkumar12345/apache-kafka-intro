@@ -50,9 +50,9 @@ A message bus was the solution.
 
 With a message bus, you could decouple your source and target systems.
 
-Right now the most popular messaging systems are:
+The most popular messaging systems are:
 
-  - Apache Kafka was initially developed at LinkedIn. It's now managed by Confluent.
+  - Apache Kafka (initially developed at LinkedIn, now managed by Confluent)
   - MapR Event Store for Apache Kafka (MapR)
   
 These systems are distributed, fault tolerant, resilient, and scalable.
