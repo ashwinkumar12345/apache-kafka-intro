@@ -17,7 +17,7 @@ Learn Apache Kafka 2.0 Ecosystem
 **[Kafka Demo – Part 1](#javademo1)**<br>
 **[Kafka Eco Components](#eco)**<br>
 **[Kafka Demo – Part 2](#javademo2)**<br>
-**[Admin](#admin)**<br>
+**[Admin Responsibilities](#admin)**<br>
 **[Use Cases 1 - MovieFlix](#usecase1)**<br>
 **[Use Cases 2 - TrendBook](#usecase2)**<br>
 
@@ -204,7 +204,7 @@ C:\kafka_2.12-2.2.0> kafka-console-consumer.bat --bootstrap-server 127.0.0.1:909
 ![17](https://user-images.githubusercontent.com/4720428/56758671-13456080-674c-11e9-96ff-447d4e7e1408.png)
 
 <a name="admin"></a>
-> ## Admin
+> ## Admin Responsibilities
 
 - Kafka Admin
 
