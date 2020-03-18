@@ -31,11 +31,11 @@ Data is a continuous stream of events. An event is a significant change in state
     
 <a name="batchtorealtime"></a>
 > ## Batch to Real Time => Lambda Architecture
-- Data is stored in both HDFS and Apache Storm 
-- Drawbacks
-  - Events processed out of order
-  - Events are lost due to node failures
-  - Manage both a Hadoop cluster and a Storm cluster
+Twitter used to store data in HDFS and in Apache Storm.
+They found that this system had drawbacks:
+ - Events were processed out of order
+ - Events were lost because of node failures
+ - Managing an HDFS cluster and a Storm cluster was difficult
   
   ![14](https://user-images.githubusercontent.com/4720428/56757501-39b5cc80-6749-11e9-8695-bb1a40ef534f.png)
   
