@@ -48,46 +48,52 @@ It became important to find a reliable way to integrate source and target system
 
 A message bus was the solution.
 
-The message bus is distributed, fault tolerant, resilient, and scalable.
-
 With a message bus, you could decouple your source and target systems.
 
-
-- Popular Messaging Systems:
+Right now the most popular messaging systems are:
 
   - Apache Kafka was initially developed at LinkedIn. It's now managed by Confluent.
   - MapR Event Store for Apache Kafka (MapR)
+  
+These systems are distributed, fault tolerant, resilient, and scalable.
   
   ![15](https://user-images.githubusercontent.com/4720428/56757653-9ca76380-6749-11e9-927a-433f77b77c1a.png)
   
    <a name="concepts"></a>
 > ## Kafka / MapR Stream Concepts
-- Topic
-  - Logical collection of messages or events
-  - You can have as many topics as you want
-  - Identified by its name
-- Partition
-  - Topics are split into partitions for parallelism
-- Offsets
-  - Partitions are split into offsets with incremental IDs
-- Streams (specific to MapR Event Store)
-  - Stream is a collection of topics
-- Some important points:
+
+Topic:
+ - Logical collection of messages or events
+ - You can have as many topics as you want
+ - Identified by its name
+  
+Partition:
+ - Topics are split into partitions for parallelism
+  
+Offsets:
+ - Partitions are split into offsets with incremental IDs
+  
+Streams (specific to MapR Event Store)
+ - Stream is a collection of topics
+  
+Some important points:
   - To identify a message you need to specify the stream name, topic name, partition number, and offset ID 
   - Once data is written to a partition it cannot be changed
   - Data stored at the offsets is only kept for a limited amount of time
   - Order is guaranteed only within a partition and not across partitions
-  - Data is written randomly to partition 0, 1, or 2, if you don't provide a key
+  - Data is written randomly to partitions 0, 1, or 2, if you don't provide a key
   
   <img width="438" alt="4" src="https://user-images.githubusercontent.com/4720428/56757751-d7110080-6749-11e9-9909-ef818b752255.png">
 
 <a name="streamingexample"></a>
 > ## Streaming Example
-- Each truck reports its GPS coordinates to Kafka using a some mechanism
-  - Create a Kafka topic with name "trucks_gps“ with 10 partitions (arbitrarily chosen)
-  - GPS coordinates sent to Kafka every 20 seconds
-  - Each message constitutes the truck ID and coordinates
-  - All trucks will send data to that one topic, you do not have one topic per truck
+
+Trucks report their GPS coordinates to Kafka using a some mechanism.
+
+  - GPS coordinates sent to Kafka every 20 seconds.
+  - Each message constitutes the truck ID and coordinates.
+  - All trucks will send data to that one topic, you do not have one topic per truck.
+  - Create a Kafka topic with name "trucks_gps“ with 10 partitions (arbitrarily chosen).
   - Once you have the data in Kafka, you can write a consumer application, say a location dashboard application or an application to calculate velocity of each truck
   
   <img width="608" alt="5" src="https://user-images.githubusercontent.com/4720428/56758255-08d69700-674b-11e9-971f-9a9e2bea5ca8.png">
@@ -121,35 +127,40 @@ With a message bus, you could decouple your source and target systems.
 
 <a name="backend"></a>
 > ## Kafka Backend
+
 - A topic or stream is split across the cluster
   - Broker or server: 3 (IDs 101, 102, 103) 
   - Topics: 1 (Topic-A) 
   - Partitions: 2 (0 and 1) 
   - Replication factor: 1
-- For a given partition, you have only one leader that receives and serves data for that partition, the other brokers synchronize that data
-- If a leader broker goes down, you have an election to choose new leader. The leader and in sync replicas are decided by Zookeeper
+
+For a given partition, you have only one leader that receives and serves data for that partition, the other brokers synchronize that data. If a leader broker goes down, you have an election to choose new leader. The leader and in sync replicas are decided by Zookeeper
 
 <img width="622" alt="6" src="https://user-images.githubusercontent.com/4720428/56758312-2dcb0a00-674b-11e9-9532-eac3e4876624.png">
 
 <a name="producer"></a>
 > ## Producers
-- Write data to topics
-  - Producers automatically know which broker and partition to write to
-  - Delivery semantics indicates the integrity of data as it moves from point A to point B:
-   - acks = 0: Producer does not wait for acknowledgment (data loss) - At most once
-   - acks = 1: Producer waits for leader acknowledgement (limited data loss) - At least once
-   - acks = 2: Producer waits for leader + replica acknowledgement (no data loss) - Exactly once, expensive
+
+Write data to topics.
+
+ - Producers automatically know which broker and partition to write to
+ - Delivery semantics indicates the integrity of data as it moves from point A to point B:
+  - acks = 0: Producer does not wait for acknowledgment (data loss) - At most once
+  - acks = 1: Producer waits for leader acknowledgement (limited data loss) - At least once
+  - acks = 2: Producer waits for leader + replica acknowledgement (no data loss) - Exactly once, expensive
 
 <img width="638" alt="7" src="https://user-images.githubusercontent.com/4720428/56758357-489d7e80-674b-11e9-98b1-51f6f13eeb1a.png">
    
 <a name="consumer"></a>
 > ## Consumers
-- Read data from a topic 
-  - A single consumer can read from only one partition so there is no contention among consumers
-  - Consumer Groups are a group of consumers working together
-  - Consumers in a consumer group read data from exclusive partitions for faster performance, each consumer would get a subset of the messages
-  - Consumer group represents an application
-  - Consumer offsets - Kafka stores offsets at which a consumer group has been reading to help the consumer group keep track of where it is as it's reading data from a topic
+
+Read data from a topic.
+
+ - A single consumer can read from only one partition so there is no contention among consumers
+ - Consumer Groups are a group of consumers working together
+ - Consumers in a consumer group read data from exclusive partitions for faster performance, each consumer would get a subset of the messages
+ - Consumer group represents an application
+ - Consumer offsets - Kafka stores offsets at which a consumer group has been reading to help the consumer group keep track of it's location as it's reading data from a topic
   
 <img width="690" alt="8" src="https://user-images.githubusercontent.com/4720428/56758392-62d75c80-674b-11e9-92a6-439b86f60a58.png">
   
@@ -183,6 +194,7 @@ C:\kafka_2.12-2.2.0> kafka-console-consumer.bat --bootstrap-server 127.0.0.1:909
 
 <a name="eco"></a>
 > ## Kafka Eco Components
+
 - Kafka Connect Source
 - Kafka Connect Sink
 - KStreams (Spark Streaming or Apache Flink for advanced computation)
@@ -195,12 +207,15 @@ C:\kafka_2.12-2.2.0> kafka-console-consumer.bat --bootstrap-server 127.0.0.1:909
 
 <a name="admin"></a>
 > ## Admin
+
 - Kafka Admin
-    -Kafka Cluster Setup
+
+    - Kafka Cluster Setup
     - Isolate Zookeeper and Kafka brokers
     - Setup Kafka Monitoring (ES + Kibana, Confluent Control Center…)
     - Setup Security
     - Setup MirrorMaker (Manage Replication)
+    
 - MapR Admin
     - MapR Cluster
     - MapR Monitoring
