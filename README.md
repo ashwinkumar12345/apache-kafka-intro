@@ -24,11 +24,9 @@ Learn Apache Kafka 2.0 Ecosystem
 
 <a name="intro"></a>
 > ## Why Do We Need Real Time?
-- To react to events as they happen, you need to process data as it arrives
-- Process data in real time
-- Value of data decreases with time
-- Data is a continuous stream of events
-- An event is a significant change in state
+
+Data is a continuous stream of events. An event is a significant change in state. The value of events usually decreases with time. So, to react to events as they happen, you need to process data as it arrives.
+
 ![13](https://user-images.githubusercontent.com/4720428/56757364-e04d9d80-6748-11e9-8a30-e668745905f6.png)
     
 <a name="batchtorealtime"></a>
