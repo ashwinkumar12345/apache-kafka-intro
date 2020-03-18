@@ -27,7 +27,7 @@ Learn Apache Kafka 2.0 Ecosystem
 
 Data is a continuous stream of events. An event is a significant change in state. The value of events usually decreases with time. So, to react to events as they happen, you need to process data as it arrives.
 
-![13](https://user-images.githubusercontent.com/4720428/56757364-e04d9d80-6748-11e9-8a30-e668745905f6.png)
+<img src="https://user-images.githubusercontent.com/4720428/56757364-e04d9d80-6748-11e9-8a30-e668745905f6.png" alt="alt text" width="400" height="100">
     
 <a name="batchtorealtime"></a>
 > ## Batch to Real Time => Lambda Architecture
@@ -39,7 +39,7 @@ Writing data to both clusters had drawbacks:
  - Events were lost because of node failures
  - Keeping both clusters in sync was difficult
   
-  ![14](https://user-images.githubusercontent.com/4720428/56757501-39b5cc80-6749-11e9-8695-bb1a40ef534f.png)
+<img src="https://user-images.githubusercontent.com/4720428/56757501-39b5cc80-6749-11e9-8695-bb1a40ef534f.png" alt="alt text" width="300" height="300">
   
 It became important to find a reliable way to integrate source and target systems without needing to maintain data in two separate places.
   
@@ -54,8 +54,8 @@ The most popular messaging systems are:
   - MapR Event Store for Apache Kafka (MapR)
   
 These systems are distributed, fault tolerant, resilient, and scalable.
-  
-  ![15](https://user-images.githubusercontent.com/4720428/56757653-9ca76380-6749-11e9-927a-433f77b77c1a.png)
+
+<img src="https://user-images.githubusercontent.com/4720428/56757653-9ca76380-6749-11e9-927a-433f77b77c1a.png" alt="alt text" width="200" height="200">
   
    <a name="concepts"></a>
 > ## Kafka / MapR Stream Concepts
@@ -98,7 +98,7 @@ All trucks send data to one topic, you do not have one topic per truck.
 Create a Kafka topic with name "trucks_gps“ with 10 partitions (arbitrarily chosen).
 Once you have the data in Kafka, you can write a consumer application, say a location dashboard application or an application to calculate velocity of each truck
   
-  <img width="608" alt="5" src="https://user-images.githubusercontent.com/4720428/56758255-08d69700-674b-11e9-971f-9a9e2bea5ca8.png">
+<img width="608" alt="5" src="https://user-images.githubusercontent.com/4720428/56758255-08d69700-674b-11e9-971f-9a9e2bea5ca8.png">
   
 <a name="clidemo"></a>
 > ## Kafka CLI (MapR Sandbox) Demo
@@ -188,7 +188,7 @@ C:\kafka_2.12-2.2.0> kafka-console-consumer.bat --bootstrap-server 127.0.0.1:909
 <a name="javademo1"></a>
 > ## Kafka Demo – Part 1
 
-![16](https://user-images.githubusercontent.com/4720428/56758586-dbd6b400-674b-11e9-835f-00c4bd64a6de.png)
+<img src="https://user-images.githubusercontent.com/4720428/56758586-dbd6b400-674b-11e9-835f-00c4bd64a6de.png" alt="alt text" width="500" height="200">
 
 <a name="eco"></a>
 > ## Kafka Eco Components
@@ -201,7 +201,7 @@ C:\kafka_2.12-2.2.0> kafka-console-consumer.bat --bootstrap-server 127.0.0.1:909
 <a name="javademo2"></a>
 > ## Kafka Demo – Part 2
 
-![17](https://user-images.githubusercontent.com/4720428/56758671-13456080-674c-11e9-96ff-447d4e7e1408.png)
+<img src="https://user-images.githubusercontent.com/4720428/56758671-13456080-674c-11e9-96ff-447d4e7e1408.png" alt="alt text" width="600" height="300">
 
 <a name="admin"></a>
 > ## Admin Responsibilities
@@ -224,12 +224,12 @@ C:\kafka_2.12-2.2.0> kafka-console-consumer.bat --bootstrap-server 127.0.0.1:909
 <a name="usecase1"></a>
 > ## Use Cases 1 - MovieFlix
 
-![18](https://user-images.githubusercontent.com/4720428/56758746-396b0080-674c-11e9-91b1-4b6af1da246a.png)
+<img src="https://user-images.githubusercontent.com/4720428/56758746-396b0080-674c-11e9-91b1-4b6af1da246a.png" alt="alt text" width="600" height="300">
 
 <a name="usecase2"></a>
 > ## Use Cases 2 - TrendBook
 
-![19](https://user-images.githubusercontent.com/4720428/56758850-6d462600-674c-11e9-869b-172b33d3b378.png)
+<img src="https://user-images.githubusercontent.com/4720428/56758850-6d462600-674c-11e9-869b-172b33d3b378.png" alt="alt text" width="600" height="300">
 
 
 
